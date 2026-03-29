@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>🐶 けいさつけんがにげろ！</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="ui">
+  <div class="score-box">⭐ <span id="scoreDisplay">0</span></div>
+  <div class="life-box" id="lifeDisplay">❤️❤️❤️</div>
+</div>
+<canvas id="gameCanvas"></canvas>
+<div id="dpad">
+  <button class="dpad-btn" id="btn-up">⬆️</button>
+  <button class="dpad-btn" id="btn-left">⬅️</button>
+  <button class="dpad-btn" id="btn-right">➡️</button>
+  <button class="dpad-btn" id="btn-down">⬇️</button>
+</div>
+<div id="overlay">
+  <div class="panel" id="startPanel">
+    <div class="char-preview">🐶</div>
+    <h1>けいさつけんが<br>にげろ！</h1>
+    <div class="sub">⭐をあつめて にじいろイモムシからにげろ！</div>
+    <button class="btn" id="startBtn">▶ はじめる</button>
+  </div>
+  <div class="panel" id="gameoverPanel" style="display:none">
+    <div class="char-preview">🐶💦</div>
+    <h1>つかまった！</h1>
+    <div class="score-display" id="finalScore">0</div>
+    <div class="high-score" id="highScoreDisplay">ベスト: 0</div>
+    <button class="btn" id="retryBtn">🔄 もういちど</button>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
