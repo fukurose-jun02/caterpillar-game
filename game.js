@@ -227,7 +227,7 @@ class Caterpillar {
 }
 
 // ===== PLAYER =====
-const player={x:300,y:300,r:32,vx:0,vy:0,speed:5.2,invincible:0,angle:0,bounce:0};
+const player={x:300,y:300,r:32,vx:0,vy:0,speed:6.8,invincible:0,angle:0,bounce:0};
 let keys={},joystickDx=0,joystickDy=0;
 
 function drawPlayer(){
@@ -299,7 +299,7 @@ function gameLoop(){
   if(player.invincible>0) player.invincible--;
 
   // Caterpillar update
-  for(const c of caterpillars){c.speed=1.8+speedMult*0.5;c.update(player.x,player.y);}
+  for(const c of caterpillars){c.speed=1.6+speedMult*0.45;c.update(player.x,player.y);}
 
   // Collision
   if(player.invincible===0){
