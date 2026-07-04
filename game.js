@@ -227,7 +227,7 @@ class Caterpillar {
 }
 
 // ===== PLAYER =====
-const player={x:300,y:300,r:32,vx:0,vy:0,speed:3.8,invincible:0,angle:0,bounce:0};
+const player={x:300,y:300,r:32,vx:0,vy:0,speed:5.2,invincible:0,angle:0,bounce:0};
 let keys={},joystickDx=0,joystickDy=0;
 
 function drawPlayer(){
