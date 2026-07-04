@@ -58,23 +58,6 @@
   .btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #0d1f5c; }
   .char-preview { font-size: 64px; margin-bottom: 12px; animation: bounce 0.8s infinite alternate; }
   @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-12px); } }
-  #dpad {
-    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-    display: none;
-    grid-template-areas: ". up ." "left . right" ". down .";
-    grid-template-columns: 60px 60px 60px;
-    grid-template-rows: 60px 60px 60px;
-    gap: 4px; z-index: 10;
-  }
-  .dpad-btn {
-    background: rgba(255,255,255,0.7); border: none; border-radius: 12px;
-    font-size: 24px; cursor: pointer; box-shadow: 0 4px 0 rgba(0,0,0,0.2);
-    display: flex; align-items: center; justify-content: center;
-    -webkit-tap-highlight-color: transparent; user-select: none;
-  }
-  .dpad-btn:active { transform: scale(0.9); }
-  #btn-up { grid-area: up; } #btn-down { grid-area: down; }
-  #btn-left { grid-area: left; } #btn-right { grid-area: right; }
   .float-star {
     position: fixed; pointer-events: none; font-size: 22px;
     animation: floatUp 0.9s ease-out forwards; z-index: 50;

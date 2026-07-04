@@ -229,8 +229,6 @@ class Caterpillar {
 // ===== PLAYER =====
 const player={x:300,y:300,r:32,vx:0,vy:0,speed:3.8,invincible:0,angle:0,bounce:0};
 let keys={},joystickDx=0,joystickDy=0;
-const isMobile=/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
-if(isMobile) document.getElementById('dpad').style.display='grid';
 
 function drawPlayer(){
   const p=player;
@@ -407,17 +405,6 @@ function endGame(){
 // Controls
 document.addEventListener('keydown',e=>{keys[e.key]=true;});
 document.addEventListener('keyup',e=>{keys[e.key]=false;});
-
-const dpadMap={'btn-up':[0,-1],'btn-down':[0,1],'btn-left':[-1,0],'btn-right':[1,0]};
-for(const[id,[dx,dy]] of Object.entries(dpadMap)){
-  const btn=document.getElementById(id);
-  const s=()=>{joystickDx=dx*1.1;joystickDy=dy*1.1;};
-  const e=()=>{joystickDx=0;joystickDy=0;};
-  btn.addEventListener('touchstart',ev=>{ev.preventDefault();s();},{passive:false});
-  btn.addEventListener('touchend',e);
-  btn.addEventListener('mousedown',s);
-  btn.addEventListener('mouseup',e);
-}
 
 let touchId=null;
 canvas.addEventListener('touchstart',e=>{e.preventDefault();touchId=e.changedTouches[0].identifier;},{passive:false});
