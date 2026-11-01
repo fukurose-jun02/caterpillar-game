@@ -1,3 +1,6 @@
+> **このゲームはお引越ししました。** 今後は [まとめサイト my-games](https://github.com/fukurose-jun02/my-games) の `caterpillar-game/` フォルダで管理しています。
+> 遊ぶ：https://fukurose-jun02.github.io/my-games/caterpillar-game/
+
 # 🐶 けいさつけんがにげろ！
 
 BabyBusの警察犬キャラクターがにじいろイモムシから逃げるブラウザゲームです。
